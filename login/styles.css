@@ -1,0 +1,420 @@
+html {
+	font-size: 13px;
+}
+
+body {
+	background-color: #05155f;
+	color: #fff;
+	font-family: 'Libre Baskerville', sans-serif;
+}
+
+main {
+	min-width: 370px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+#msgWarn {
+	display: none;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	border-radius: 1em;
+	align-items: center;
+	gap: .5em;
+	padding: .5em;
+	z-index: 300;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	min-height: 560px;
+	height: 80vh;
+	max-height: 900px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+
+.form-login {
+	order: 20;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0.8em 2em;
+	color: #000;
+	flex-grow: 1;
+}
+
+.form__fields, .login__options {
+	max-width: 400px;
+}
+
+.form__fields {
+	position: relative;
+}
+
+.form__fields, .form__field {
+	width: 100%;
+}
+
+.form__field {
+	margin-bottom: .2em;
+}
+
+.form__tittle {
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: .7em;
+}
+
+.form__fields .login-default {
+	margin-bottom: 1em;
+	font-style: italic;
+}
+
+.form__label {
+	display: block;
+	background-color: #a5b5ff;
+	font-weight: 700;
+	font-size: 1.1em;
+	border-left: 3px solid #05155f;
+	padding-left: 10px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.form__field #password {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.form__input {
+	width: 100%;
+	margin: 5px 0;
+	padding: .4em 1.8em .4em .7em;
+	border: none;
+	border-bottom: 3px solid #05155f;
+}
+
+
+.form__input:focus {
+	border-radius: 10px;
+	outline: 3px solid #05155f;
+}
+
+.form__view-password {
+	position: absolute;
+	margin-right: .5em;
+}
+
+.form__view-password .view {
+	cursor: pointer;
+}
+
+.form__warn-icon {
+	font-size: 2em;
+}
+
+.user__options {
+	display: flex;
+	gap: .4em;
+	margin-bottom: .9em;
+	justify-content: space-between;
+}
+
+.user__options #retrieve {
+	color: #05155f;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.user__options #retrieve:hover {
+	color: #15256f;
+}
+
+.form__send {
+	text-align: center;
+}
+
+.form__input-send {
+	background-color: #05155f;
+	border: none;
+	padding: .8em 1.5em;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+}
+
+.form__input-send:hover {
+	background-color: #00004b;
+}
+
+/* FORGET PASSWORD */
+
+.forget-password {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	padding: .5rem;
+	border-radius: .5rem;
+	opacity: 0;
+	transition: opacity .3s;
+	z-index: 100;
+	color: #000;
+	overflow: hidden;
+}
+
+.forget__background {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	opacity: 0;
+	transition: opacity .3s;
+	z-index: 50;
+	color: #fff;
+}
+
+.forget-password .form__field {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.forget__title {
+	font-style: italic;
+	cursor: pointer;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.forget-password .form__field button {
+	margin: 0 auto;
+	margin-top: 1rem;
+}
+
+.forget__msgInSend {
+	background-color: #fff;
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.forget__msgInSend span {
+	font-style: italic;
+	text-align: center;
+}
+
+.forget__msgInSend i {
+	font-size: 3rem;
+	color: #2ccc4c;
+}
+
+.forget__msgInSend button {
+	border: none;
+	padding: .5rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.forget__msgInSend #resendCode {
+	background-color: #2ccc4c;
+}
+
+.forget__msgInSend #changeUser {
+	background-color: #05155f;
+}
+
+.forget__msgInSend #resendCode:hover {
+	background-color: #1cbc3c;
+}
+
+.forget__msgInSend #changeUser:hover {
+	background-color: #05054f;
+}
+
+/* LOGIN OPTIONS */
+
+.login__options {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	user-select: none;
+}
+
+.login__options, .login__option {
+	width: 100%;
+}
+
+.login__option {
+	margin: .8em 0;
+	padding: .5em;
+	border-radius: .5em;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	font-size: 1.2em;
+	user-select: none;
+}
+
+.login__options #facebook {
+	background-color: #16f;
+}
+
+.login__options #facebook:hover {
+	background-color: #05e;
+}
+
+.login__options #google {
+	background-color: #f12;
+}
+
+.login__options #google:hover {
+	background-color: #e01;
+}
+
+.login__options #twitter {
+	background-color: #1af;
+}
+
+.login__options #twitter:hover {
+	background-color: #09e;
+}
+
+.login__options #signUp {
+	background-color: #05155f;
+}
+
+.login__options #signUp:hover {
+	background-color: #00004b;
+}
+
+.form-aside {
+	order: 10;
+	max-height: 200px;
+	background-color: #000;
+}
+
+.form-aside img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.form__processing-background {
+	position: fixed;
+	background-color: #000;
+	color: #fff;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+/* VALIDACIÓN DE CAMPOS  */
+#msgWarn {
+	background-color: #cc2c4c;
+}
+
+ /*Media Queris */
+@media only screen and (min-width: 450px){
+	.form__fields, .login__options {
+		padding: 0 1em;
+	}
+
+	.form-aside {
+		overflow: hidden;
+	}
+
+	.form-aside img {
+		height: auto;
+		object-fit: fill;
+	}
+
+	.user__options {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	.user__option {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	html {
+		font-size: 14px;
+	}
+
+	.form__fields, .login__options {
+		width: 50%;
+		min-height: 250px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	.main-content {
+		width: 100%;
+		max-width: 1100px;
+		flex-direction: row;
+	}
+
+	.form__tittle {
+		position: absolute;
+		top: 1em;
+	}
+
+	.form-login {
+		position: relative;
+		min-width: 700px;
+		padding-top: 5em;
+	}
+
+	.form-aside {
+		display: block;
+		flex-grow: 1;
+		max-height: none;
+		order: 30;
+	}
+
+	.form-aside img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,248 @@
+html {
+	font-size: 13px;
+}
+
+body {
+	background-color: #05155f;
+	font-family: 'Libre Baskerville', sans-serif;
+	color: #fff;
+}
+
+main {
+	min-width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+#msgWarn, #alreadyExists {
+	display: none;
+	position: fixed;
+	top: 1em;
+	margin: 0 1em;
+	border-radius: 1em;
+	align-items: center;
+	gap: .5em;
+	padding: .5em;
+	z-index: 10;
+}
+
+.form__warn-icon {
+	font-size: 2em;
+}
+
+form {
+	background-color: #fff;
+}
+
+form, .msgErrorContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	min-width: 300px;
+	min-height: 350px;
+	height: 50vh;
+	max-height: 600px;
+	border-radius: 1rem;
+	justify-content: center;
+	color: #000;
+}
+
+.form__fields {
+	padding: 1rem;
+}
+
+.form__fields, .form__field {
+	width: 100%;
+	margin-bottom: .2em;
+}
+
+.form__header {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 1rem;
+}
+
+.form__tittle {
+	width: 100%;
+	font-size: 2em;
+	margin-bottom: .3em;
+}
+
+.form__label {
+	display: block;
+	background-color: #a5b5ff;
+	font-weight: 700;
+	font-size: 1.1em;
+	border-left: 3px solid #05155f;
+	padding-left: 10px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.label-user {
+	cursor: default;
+}
+
+.form__input {
+	width: 100%;
+	margin: 5px 0;
+	padding: .4rem 2.2rem .4rem .7rem;
+	border: none;
+	border-bottom: 3px solid #05155f;
+}
+
+#user {
+	margin: 5px 0;
+	padding: .4rem 2.2rem .4rem .7rem;
+	background-color: #5f6;
+	border-radius: 10px;
+	outline: 3px solid #05155f;
+	color: #000;
+	text-align: center;
+}
+
+
+.form__input:focus {
+	border-radius: 10px;
+	outline: 3px solid #05155f;
+}
+
+.form__field .password, .form__field .confirm-password {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.form__status {
+	position: absolute;
+	margin-right: .5em;
+}
+
+.form__status .view {
+	cursor: pointer;
+}
+
+.form__send {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.form__input-send, #loginBack {
+	background-color: #05155f;
+	border: none;
+	padding: .8em 1.5em;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+}
+
+.form__input-send:hover, #loginBack:hover {
+	background-color: #00004b;
+}
+
+.form__recover-result--background {
+	position: fixed;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 50;
+	background-color: #000;
+	color: #fff;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.form__recover-result {
+	position: absolute;
+	background-color: #fff;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+	padding: 2rem;
+	text-align: center;
+	z-index: 100;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.form__recover-result i {
+	font-size: 10rem;
+}
+
+.form__recover-result .result-msg {
+	font-style: italic;
+}
+
+#loginBack {
+	display: none;
+}
+
+/* VALIDACIÓN DE CAMPOS  */
+.form__input.invalid:focus {
+	border-bottom: 3px solid #cc2c4c;
+}
+
+.form__input.invalid {
+	border-bottom: 3px solid #cc2c4c;
+}
+
+.form__input.valid:focus {
+	border-bottom: 3px solid #2ccc4c;
+}
+
+.form__input.valid {
+	border-bottom: 3px solid #2ccc4c;
+}
+
+.form__input.live-valid {
+	outline: 3px solid #2ccc4c;
+	border-bottom: 3px solid #2ccc4c;
+}
+
+.form__input.live-invalid {
+	outline: 3px solid #cc2c4c;
+	border-bottom: 3px solid #cc2c4c;
+}
+
+.form__status-valid {
+	color: #2ccc4c;
+}
+
+.form__status-invalid {
+	color: #cc2c4c;
+}
+
+.form__msg-invalid {
+	display: flex;
+	color: #cc2c4c;
+	font-size: 0.8em;
+}
+
+#msgWarn {
+	background-color: #cc2c4c;
+}
+
+.form__recover-result .valid {
+	color: #2ccc4c;
+}
+
+.form__recover-result .invalid {
+	color: #cc2c4c;
+}
